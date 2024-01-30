@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Life on Mars - 3024</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main id="app">
+            <!-- TODO: Character selection screena -->
+            <div class="characterSelectContainer">
+                <div class="card">
+                    <div class="cardContent">
+                        <h3>Aaron</h3>
+                        <div class="imgContainer">
+                            <img src="./assets/charPlaceholder.png" alt="placeholder" height="200px" />
+                        </div>
+                        <div class="description">
+                            <div class="descriptionContent">
+                                <h4>Name:</h4>
+                                <p>Aaron</p>
+                            </div>
+                            <div class="descriptionContent">
+                                <h4>Bio:</h4>
+                                <p>
+                                    Aaron, a resilient Martian pioneer, navigates the harsh red landscapes with a
+                                    pioneering spirit, blending scientific acumen and survival instincts to unravel the
+                                    mysteries of the new frontier.<br /><br />
+                                </p>
+                            </div>
+                            <div class="descriptionContent">
+                                <h4>Base Mood:</h4>
+                                <p>Happy</p>
+                            </div>
+                            <button class="btn btnSelectAaron">Choose</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardContent">
+                        <h3>Reuben</h3>
+                        <div class="imgContainer">
+                            <img src="./assets/charPlaceholder.png" alt="placeholder" height="200px" />
+                        </div>
+                        <div class="description">
+                            <div class="descriptionContent">
+                                <h4>Name:</h4>
+                                <p>Reuben</p>
+                            </div>
+                            <div class="descriptionContent">
+                                <h4>Bio:</h4>
+                                <p>
+                                    Reuben, a resourceful Martian engineer, combines his Earthly expertise with
+                                    adaptability to construct innovative solutions, ensuring the sustenance and progress
+                                    of the human colony on the unforgiving Martian terrain.
+                                </p>
+                            </div>
+                            <div class="descriptionContent">
+                                <h4>Base Mood:</h4>
+                                <p>Tired</p>
+                            </div>
+                            <button class="btn btnSelectReuben">Choose</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardContent">
+                        <h3>Constantin</h3>
+                        <div class="imgContainer">
+                            <img src="./assets/charPlaceholder.png" alt="placeholder" height="200px" />
+                        </div>
+                        <div class="description">
+                            <div class="descriptionContent">
+                                <h4>Name:</h4>
+                                <p>Constantin</p>
+                            </div>
+                            <div class="descriptionContent">
+                                <h4>Bio:</h4>
+                                <p>
+                                    Constantin, an adventurous Martian explorer, channels his insatiable curiosity into
+                                    discovering hidden Martian wonders, constantly pushing the boundaries of human
+                                    understanding while forging connections with the alien environment.
+                                </p>
+                            </div>
+                            <div class="descriptionContent">
+                                <h4>Base Mood:</h4>
+                                <p>Bored</p>
+                            </div>
+                        </div>
+                        <button class="btn btnSelectConstantin">Choose</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODO: Main game screen -->
+            <div class="gameScreenContainer hidden">
+                <h3 class="characterName">Aaron</h3>
+                <div class="characterImage">
+                    <img class="imgPlayer" src="./assets/charPlaceholder.png" alt="placeholder" />
+                    <img class="speechOxygen hidden" src="./assets/5.png" alt="oxygen speech bubble" />
+                    <img class="speechHunger hidden" src="./assets/1.png" alt="hunger speech bubble" />
+                    <img class="speechThirst hidden" src="./assets/2.png" alt="thirsty speech bubble" />
+                    <img class="speechEnergy hidden" src="./assets/3.png" alt="tired speech bubble" />
+                    <img class="speechBoredom hidden" src="./assets/4.png" alt="bored speech bubble" />
+                </div>
+                <div class="statsCharContainer">
+                    <div class="statsContainer">
+                        <div class="statsGroup">
+                            <div>
+                                <h3>Health</h3>
+                                <div class="health statBar">100</div>
+                            </div>
+                            <div>
+                                <h3>Oxygen</h3>
+                                <div class="oxygen statBar">100</div>
+                            </div>
+                        </div>
+                        <div class="statsGroup">
+                            <div>
+                                <h3>Hunger</h3>
+                                <div class="hunger statBar">100</div>
+                            </div>
+                            <div>
+                                <h3>Thirst</h3>
+                                <div class="thirst statBar">100</div>
+                            </div>
+                        </div>
+                        <div class="statsGroup">
+                            <div>
+                                <h3>Energy</h3>
+                                <div class="energy statBar">100</div>
+                            </div>
+                            <div>
+                                <h3>Boredom</h3>
+                                <div class="boredom statBar">100</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonContainer">
+                        <button class="btn btnOxygen">Refill Oxygen</button>
+                        <button class="btn btnEat">Eat Food</button>
+                        <button class="btn btnDrink">Drink Water</button>
+                        <button class="btn btnExercise">Exercise</button>
+                        <button class="btn btnSleep">Sleep</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODO: Game over screen -->
+            <div class="gameoverScreenContainer hidden">
+                <div class="gameoverContent">
+                    <h2>You have died.</h2>
+                    <p class="survivalTime">Your survived for 0 seconds</p>
+                    <p>Would you like to play again?</p>
+                    <button class="btn btnRestart">Restart</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- MODAL HTML CODE BELOW -->
+
+        <div class="modalBackground">
+            <div class="modalContainer">
+                <span class="modalClose" onclick="closeModal()">&times;</span>
+                <div class="modalContent">
+                    <h2>Life on Mars</h2>
+                    <p>
+                        Welcome to "Life on Mars," a captivating gaming experience set in the year 3024. Immerse
+                        yourself in the Martian perspective as you embark on a unique tamagotchi-style journey where
+                        humans take center stage. Your mission? To ensure the survival and well-being of these digital
+                        humans by managing crucial stats in this futuristic adventure.
+                        <br />
+                        <br />
+                        In this advanced Martian society, you'll face the challenges of caring for virtual humans with
+                        needs as diverse as Health, Oxygen, Hunger, Thirst, energy, and Boredom. Navigate through
+                        Earth's historical events, making strategic decisions to maintain the delicate balance of these
+                        essential stats.
+                        <br />
+                        <br />
+                        Keep a close eye on their Health to ensure they stay robust and resilient. Manage their Oxygen
+                        levels for survival on Earth. Satisfy their Hunger and Thirst to keep them nourished and
+                        hydrated. Combat Fatigue and maintain their energy levels and mental acuity. Additionally, ward
+                        off Boredom to support their overall well-being. As you progress, explore the consequences of
+                        your choices, shaping the destiny of these virtual humans against the backdrop of Earth's past.
+                        <br />
+                        <br />
+                        Can you master the intricacies of "Life on Mars" and lead your digital humans through the
+                        challenges of history? The fate of these characters rests in your hands as you embark on a
+                        unique and captivating journey through time and space.
+                    </p>
+                </div>
+                <button class="modalCloseBtn" onclick="closeModal()">Continue</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
